@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>📞 Simulasi Call Center</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+  <h1>📞 Simulasi Call Center</h1>
+  
+  <div class="config">
+    <input id="agentCount" type="number" placeholder="Jumlah Agen">
+    <input id="maxQueue" type="number" placeholder="Maks. Antrian">
+    <button id="startBtn">Mulai Simulasi</button>
+  </div>
+
+  <div class="call-input">
+    <input id="numberInput" type="text" placeholder="Nomor Penelepon">
+    <input id="durationInput" type="number" placeholder="Durasi (detik)">
+    <button id="sendCallBtn">Kirim Panggilan</button>
+  </div>
+
+  <div class="display-area">
+    <div class="queue-panel">
+      <h3>📋 Antrian Sekarang:</h3>
+      <ul id="queueList"></ul>
+    </div>
+    <div class="log-panel">
+      <h3>📝 Log Aktivitas:</h3>
+      <div id="logArea"></div>
+    </div>
+    <div class="stat-panel">
+      <h3>📊 Statistik:</h3>
+      <table id="statTable">
+        <tr><th>Parameter</th><th>Nilai</th></tr>
+        <tr><td>Total Masuk</td><td id="statReceived">0</td></tr>
+        <tr><td>Dilayani</td><td id="statServed">0</td></tr>
+        <tr><td>Ditolak</td><td id="statRejected">0</td></tr>
+        <tr><td>Antrian Sekarang</td><td id="statQueue">0</td></tr>
+        <tr><td>Total Waktu Tunggu</td><td id="statWait">0.00s</td></tr>
+        <tr><td>Total Durasi</td><td id="statDuration">0.00s</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="controls">
+    <button id="statBtn">Update Statistik</button>
+    <button id="stopBtn">Hentikan Simulasi</button>
+  </div>
+
+</div>
+<script type="module" src="app.js"></script>
+</body>
+</html>

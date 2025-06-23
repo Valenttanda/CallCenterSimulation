@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #f0f3ff, #d9e2ff);
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.config, .call-input, .controls {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.display-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.queue-panel, .log-panel, .stat-panel {
+  flex: 1 1 300px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 8px rgba(0,0,0,.1);
+}
+
+#queueList {
+  list-style-type: none;
+  padding: 0;
+}
+
+#logArea {
+  height: 150px;
+  overflow-y: scroll;
+}
+
+#statTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+#statTable th, #statTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+#statTable th {
+  background-color: #f2f2f2;
+}
+
+/* Animasi untuk item antrian */
+.queue-item {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.3s ease;
+}
+.queue-item.highlight {
+  opacity: 1;
+  transform: translateX(0);
+  background-color: #d1e7ff;
+}
