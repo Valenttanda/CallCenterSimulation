@@ -58,15 +58,3 @@ h1 {
 #statTable th {
   background-color: #f2f2f2;
 }
-
-/* Animasi untuk item antrian */
-.queue-item {
-  opacity: 0;
-  transform: translateX(-20px);
-  transition: all 0.3s ease;
-}
-.queue-item.highlight {
-  opacity: 1;
-  transform: translateX(0);
-  background-color: #d1e7ff;
-}
