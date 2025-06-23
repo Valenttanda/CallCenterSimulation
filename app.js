@@ -102,18 +102,3 @@ stopBtn.addEventListener('click', () => {
     callCenter = null;
   }
 });
-
-const deleteInput = document.getElementById('deleteInput');
-const deleteBtn = document.getElementById('deleteBtn');
-
-deleteBtn.addEventListener('click', () => {
-  if (!callCenter) {
-    appendLog('❗ Simulasi belum dimulai!');
-    return;
-  }
-  const numbersToDelete = deleteInput.value.split(',').map(n => n.trim());
-  callCenter.removeCalls(numbersToDelete);
-  deleteInput.value = '';
-  updateUI();
-  appendLog(`🗑️ Menghapus panggilan dengan nomor: ${numbersToDelete.join(', ')}`);
-});
