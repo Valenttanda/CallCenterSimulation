@@ -70,3 +70,14 @@ export class CallCenter {
     this.running = false;
   }
 }
+
+removeCalls(numbers) {
+  const newItems = this.queue.getItems().filter(call => !numbers.includes(call.number));
+  const maxSize = this.queue.maxSize;
+
+  // Reset queue
+  this.queue = new this.updateUI.CircularQueue(maxSize);
+  newItems.forEach(call => {
+    this.queue.enqueue(call);
+  });
+}
